@@ -1,0 +1,473 @@
+/* Globalne style */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f9f5ef;
+    color: #333;
+}
+  
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+}
+  
+button {
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 16px;
+    background-color: #6b705c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+button:hover {
+    background-color: #a5a58d;
+}
+
+/* Sekcja przepisów */
+.recipes-container {
+    padding: 20px;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    max-width: 1200px; /* Ograniczenie szerokości dla lepszego wyśrodkowania */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.filters label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    text-align: left;
+    font-weight: bold;
+    align-items: center; /* Wyrównanie do środka */
+}
+
+.filters input,
+.filters select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 220px; /* Wyrównanie szerokości pól */
+    height: 40px; /* Wyrównanie wysokości */
+    text-align: center;
+}
+
+.filters button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #b5838d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 40px; /* Dopasowanie wysokości do inputów */
+    align-self: flex-end; /* Zapewnia wyrównanie do dolnej krawędzi */
+}
+
+.filters button:hover {
+    background-color: #e5989b;
+}
+
+/* Poprawienie wyglądu etykiet */
+.filters label span {
+    margin-bottom: 5px; /* Odstęp między tekstem a polem wyboru */
+    display: block;
+}
+
+.recipe-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dynamiczna siatka */
+    gap: 20px; /* Odstępy między kartami */
+    padding: 20px;
+    justify-content: center;
+    list-style-type: none; /* Usunięcie czarnych kropek */
+}
+
+.recipe-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    min-height: 200px; /* Ustawienie minimalnej wysokości */
+}
+
+.recipe-card:hover {
+    transform: scale(1.05);
+}
+
+.recipe-card h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #6b705c;
+    margin-bottom: 10px;
+}
+
+.recipe-card p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.recipe-card button {
+    margin-top: auto;
+    padding: 10px 15px;
+    background-color: #6b705c;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.recipe-card button:hover {
+    background-color: #a5a58d;
+}
+
+/* Menu */
+.menu button {
+    margin: 0 10px; /* Dodaje margines 10px po lewej i prawej stronie */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #6b705c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu button:hover {
+    background-color: #a5a58d;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    background-color: #f9f5ef;
+}
+
+.main-title {
+    font-size: 64px;
+    font-weight: bold;
+    color: #6b705c;
+    margin-bottom: 50px;
+}
+
+.menu-options {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    margin-bottom: 20px; 
+}
+
+.menu-options button {
+    margin: 10px 0;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #6b705c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.menu-options button:hover {
+    transform: scale(1.1);
+    background-color: #a5a58d;
+}
+
+.menu-image img {
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Pełnoekranowe szczegóły przepisu */
+.recipe-details-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.recipe-details {
+    background: white;
+    padding: 30px;
+    width: 50%;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.recipe-details h2 {
+    margin-bottom: 20px;
+}
+
+.recipe-details p {
+    margin-bottom: 10px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background: darkred;
+}
+
+
+.reset-button {
+    background-color: #b5838d;
+    color: white;
+    font-size: 14px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center; /* Wyrównanie przycisku w linii */
+    margin-left: 20px; /* Odstęp od innych elementów */
+}
+.reset-button:hover {
+    background-color: #e5989b;
+}
+
+.cooking-steps-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.cooking-steps {
+    background: white;
+    padding: 200px;
+    width: 50%;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.cooking-steps h2 {
+    margin-bottom: 20px;
+}
+
+.cooking-steps p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cooking-steps .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cooking-steps button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #6b705c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cooking-steps button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.cooking-steps .close-button {
+    margin-top: 20px;
+    background-color: red;
+}
+
+/* Kontener dla sekcji wyszukiwania */
+.ingredients-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+/* Nagłówek */
+.ingredients-container h1 {
+    font-size: 42px;
+    font-weight: bold;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+/* Opis */
+.ingredients-container p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Pole wyszukiwania */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    gap: 10px;
+}
+
+/* Styl pola tekstowego */
+.search-bar input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 70%;
+}
+
+/* Styl przycisku wyszukiwania */
+.search-bar button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #6b705c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #a5a58d;
+}
+
+/* Stylowanie przycisku "Wróć do menu" */
+.back-button {
+    align-self: flex-start;
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #6b705c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.back-button:hover {
+    background-color: #a5a58d;
+}
+
+/* Stylowanie tekstu o braku wyników */
+.no-results {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #888;
+}
+
+/* Dostosowanie do większych ekranów */
+@media (min-width: 1200px) {
+    .ingredients-container {
+        max-width: 60%;
+    }
+
+    .search-bar {
+        max-width: 600px;
+    }
+}
+
+/* Styl dla przycisku eksportu do PDF */
+.export-pdf-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #b5838d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+.export-pdf-button:hover {
+    background-color: #e5989b;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Odstęp między przyciskami */
+    margin-top: 20px;
+}
+
+.start-cooking-button,
+.export-pdf-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #6b705c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.start-cooking-button:hover,
+.export-pdf-button:hover {
+    background-color: #a5a58d;
+}
+
