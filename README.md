@@ -1,18 +1,3 @@
-HEAD
-# Flask-React-Full-Stack-App
-
-# 💻 Launch Your Software Development Career Today!  
-
-🎓 **No degree? No problem!** My program equips you with everything you need to break into tech and land an entry-level software development role.  
-
-🚀 **Why Join?**  
-- 💼 **$70k+ starting salary potential**  
-- 🕐 **Self-paced:** Complete on your own time  
-- 🤑 **Affordable:** Low risk compared to expensive bootcamps or degrees
-- 🎯 **45,000+ job openings** in the market  
-
-👉 **[Start your journey today!](https://techwithtim.net/dev)**  
-No experience needed—just your determination. Future-proof your career and unlock six-figure potential like many of our students have!  
 # Szef Kuchni
 
 ## Opis projektu
@@ -66,4 +51,3 @@ Szef-kuchni-Frontend/
 ├── requirements.txt   # Wymagania dla backendu
 └── README.md          # Ten plik
 ```
->>>>>>> 7925d8a6015ffae44fba32e111b0b55d8f16176d
